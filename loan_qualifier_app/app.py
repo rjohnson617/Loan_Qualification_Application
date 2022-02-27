@@ -7,12 +7,13 @@ Example:
     $ python app.py
 """
 import sys
-import csv
 import fire
+from pytest import ExitCode
 import questionary
 from pathlib import Path
 
 from qualifier.utils.fileio import load_csv
+from qualifier.utils.fileio import save_csv
 
 from qualifier.utils.calculators import (
     calculate_monthly_debt_ratio,
@@ -105,21 +106,21 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
 def save_qualifying_loans(qualifying_loans):
     """Saves the qualifying loans to a CSV file.
-    
+
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # Set the output header
-    header = ["Lender", "Max Loan Amount", "Max Loan to Value", "Max Debt to Income", "Minimum Credit Score", "Interest Rate"]
     
     # @TODO: Complete the usability dialog for savings the CSV Files.
-    with open("Qualifying_Loans_Output.csv", 'w', newline='') as csvfile:
-        csvwriter = csv.writer(csvfile)
-        # Write the header to the CSV file
-        csvwriter.writerow(header)
-        
-        for item in qualifying_loans:
-            csvwriter.writerow(item)
+    if len(qualifying_loans) == 0:
+        sys.exit("There are no available loans")
+    
+    csvconfirm = questionary.confirm("would you like to save a csv?").ask()
+    if csvconfirm:
+        loan_output_csv_path = questionary.text("Provide a file path and file name for the csv").ask()
+        loan_output_csv_path = Path(loan_output_csv_path)
+        save_csv(qualifying_loans, loan_output_csv_path)
+
 
 def run():
     """The main function for running the script."""

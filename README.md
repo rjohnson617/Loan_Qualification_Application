@@ -1,6 +1,6 @@
 # Loan Qualification Application
 
-This app allows potential loan borrowers to quickly and easily identify available loan offerings. With a few user inputs the app will return a list of available bank lenders, maximum loan amount, and loan interest rate.
+This application allows potential loan borrowers to quickly and easily identify available loan offerings. With a few user inputs the app will return a list of available bank lenders, maximum loan amount, and loan interest rate. The application will prompt the user if no loans are available. If there are available loans the application will ask the user if they'd like a CSV output, if they select yes it will produce a csv file that lists the available lenders and loans in the file path and name they enter. 
 
 ---
 
@@ -37,6 +37,7 @@ You will be prompted for the following:
 4) Monthly income amount
 5) Your desired loan amount (how much you want to borrow)
 6) The estimated home value for the home you want to purchase (recent property tax assessment, Redfin, Zillow, etc.)
+7) Select if you would like a CSV ouput of the results (if there are available loans) and choose the file path to save the CSV
 
 ---
 
@@ -48,4 +49,22 @@ Code produced by Ryan Johnson
 
 ## License
 
-MIT
+Copyright (c) [2022] [Ryan Johnson]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
