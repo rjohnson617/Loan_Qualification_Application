@@ -29,6 +29,7 @@ Open a terminal Git Bash (PC) or Terminal (MacOS) and run the program using the 
 ```python
 python app.py
 ```
+![Example of the CLI user input code](https://github.com/rjohnson617/Loan_Qualification_Application/blob/main/Capture.PNG?raw=true)
 
 You will be prompted for the following:
 1) Provide file location for the current list of lenders
