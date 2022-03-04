@@ -1,0 +1,24 @@
+    1  ls -al ~/.ssh
+    2  ssh-keygen -t rsa -b 4096 -C "rysmail617@yahoo.com"
+    3  conda --version
+    4  anaconda3 --version
+    5  anaconda --version
+    6  ls -al ~/.ssh
+    7  eval "$(ssh-agent -s)"
+    8  export PATH=$ANACONDA_INSTALL_DIR/bin:$D:\Anaconda3
+    9  conda --version
+   10  pwd
+   11  ls
+   12  cd D:
+   13  conda --version
+   14  conda update conda
+   15  cd D:\Anaconda3
+   16  conda --version
+   17  conda init
+   18  conda create -n dev python=3.7 anaconda
+   19  ls
+   20  eval $(ssh-agent -s)
+   21  ssh-keygen -t rsa -b 4096 -C rysmail617@yahoo.com
+   22  cd desktop/FinTech-Workspace/Challenges/Module_02_Challenge/
+   23  cd Loan_Qualification_Application/
+   24  history 50 > terminal_history.txt
